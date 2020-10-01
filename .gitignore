@@ -1,0 +1,9 @@
+# chocolatey builds
+builds/
+
+# system files
+.DS_Store
+
+# vscode shit
+.vscode/
+.vscode-server/
