@@ -1,0 +1,5 @@
+choco pack chatterino(tab) --outputdirectory builds
+cd builds
+choco push chatterino(tab) --source https://push.chocolatey.org
+
+Use -beta/-prerelease for pre-release builds
