@@ -18,6 +18,42 @@
 <description>Chatterino is a chat client for Twitch chat. It aims to be an improved/extended version of the Twitch web chat.</description>
 <summary>Chatterino is a chat client for Twitch.tv</summary>
 <releaseNotes>
+## Beta
+
+### 2.2.3
+- Added "Channel Filters". Refer to <https://wiki.chatterino.com/Filters> for documentation.
+- Added Streamer Mode configuration (under `Settings -> General`), where you can select which features of Chatterino should behave differently when you are in Streamer Mode. (#2001)
+- Added emote completion using a colon (`:`) to the whispers channel.
+- Added a viewer list button to twitch channel header.
+- Added followage and subage information to usercard.
+- Added an option to only open channels specified in command line with `-c` parameter. You can also use `--help` to display short help message.
+- Added customizable timeout buttons to the user info popup.
+- Added image for streamer mode in the user popup icon.
+- Added vip and unvip buttons.
+- Added settings for displaying a line where the last read message was.
+- Settings now enabled by default:
+	- Colorized nicknames
+	- Show channels live
+	- Bold usernames
+- Removed loading of "v1" window layouts. If you haven't updated Chatterino in more than 2 years, there's a chance you will lose your window layout.
+- Removed update checking on unsupported platforms.
+- Improved UX of the "Login expired!" message.
+- Improved viewer list window visibility.
+- Fixed the current channels emotes not appearing at the top of the emote picker popup.
+- Fixed the user popup needing to be refreshed to see new messagesUser popup will now automatically display messages as they are received.
+- Fixed the grammar in two rate-limited system messages.
+- Fixed PageUp and PageDown not scrolling in the selected split.
+- Fixed a bug preventing users from setting the highlight color of the second entry in the "User" highlights tab.
+- Fixed a bug where the "check user follow state" event could trigger a network request; requesting the user to follow or unfollow a user.
+- Fixed the `Automatically close user popup` setting not being respected when using the `/usercard` command.
+- Fixed symlinks not being handled correctly properly when saving commands & settings.
+- Fixed crash caused by Starting Chatterino in a minimized state after an update.
+- Fixed edge-cases on emote parsing.
+- Fixed timestamps being incorrect on some messages loaded from the recent-messages service on startup (#1286, #2020)
+- Fixed timestamps missing on channel point redemption messages (#1943)
+- Fixed tooltip didn't show in `EmotePopup` depending on the `Link preview` setting enabled or no (#2008)
+- Fixed Stream thumbnail not updating after using the "Change channel" feature (#2074, #2080)
+
 ## Stable
 
 ### 2.2.2 (Hotfix)
