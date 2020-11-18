@@ -1,1 +1,0 @@
-﻿Get-Process chatterino | Foreach-Object { $_.CloseMainWindow() | Out-Null } | stop-process –force
