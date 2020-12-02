@@ -23,7 +23,7 @@
 ### 2.2.4-20201202
 - Minor: Made "#channel" in `/mentions` tab a clickable link which takes you to the channel that you were mentioned in.
 - Minor: Flag all popup dialogs as actual dialogs so they get the relevant window manager hints.
-- Bugfix: Fix a freeze caused by ignored & replaced phrases followed by Twitch Emotes.
+- Bugfix: Fix a freeze caused by ignored and replaced phrases followed by Twitch Emotes.
 
 ### 2.2.4-20201125
 - Minor: Added a link to twitchemotes.com to context menu when right-clicking Twitch emotes.
