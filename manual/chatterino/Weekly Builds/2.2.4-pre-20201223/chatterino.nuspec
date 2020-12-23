@@ -22,7 +22,7 @@
 
 ### 2.2.4-20201223
 - Minor: Added option to match mentioned user to their chat colour.
-- Minor: Added option for username truecase autocompletion
+- Minor: Added username truecase autocompletion.
 - Dev: Migrated `TwitchAccount::(un)followUser` from Kraken to Helix and moved it to `Helix::(un)followUser`.
 
 ### 2.2.4-20201216
