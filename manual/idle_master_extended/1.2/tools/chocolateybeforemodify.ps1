@@ -1,0 +1,1 @@
+﻿Get-Process IdleMasterExtended | Foreach-Object { $_.CloseMainWindow() | Out-Null } | stop-process –force
