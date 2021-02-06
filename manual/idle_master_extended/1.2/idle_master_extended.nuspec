@@ -8,7 +8,7 @@
 <title>Idle Master Extended</title>
 <authors>JonasNilson</authors>
 <projectUrl>https://chatterino.com</projectUrl>
-<icon>tools\logo.ico</icon>
+<iconUrl>tools\logo.ico</iconUrl>
 <licenseUrl>https://github.com/JonasNilson/idle_master_extended/blob/develop/LICENSE</licenseUrl>
 <requireLicenseAcceptance>false</requireLicenseAcceptance>
 <projectSourceUrl>https://github.com/JonasNilson/idle_master_extended</projectSourceUrl>
