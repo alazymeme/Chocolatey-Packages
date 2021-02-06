@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+<metadata>
+<id>idle-master-extended</id>
+<version>1.2</version>
+<packageSourceUrl>https://github.com/JonasNilson/idle_master_extended</packageSourceUrl>
+<owners>ALazyMeme</owners>
+<title>Idle Master Extended</title>
+<authors>JonasNilson</authors>
+<projectUrl>https://chatterino.com</projectUrl>
+<iconUrl>tools\logo.ico</iconUrl>
+<licenseUrl>https://github.com/JonasNilson/idle_master_extended/blob/develop/LICENSE</licenseUrl>
+<requireLicenseAcceptance>false</requireLicenseAcceptance>
+<projectSourceUrl>https://github.com/JonasNilson/idle_master_extended</projectSourceUrl>
+<docsUrl>https://github.com/JonasNilson/idle_master_extended/wiki</docsUrl>
+<bugTrackerUrl>https://github.com/JonasNilson/idle_master_extended/issues</bugTrackerUrl>
+<tags>steam steamworks steambot idle automatic steam-api idlemaster idle-master</tags>
+<description>This program will determine which of your Steam games still have Steam Trading Card drops remaining, and will go through each application to simulate you being “in-game” so that cards will drop. It will check periodically to see if the game you’re idling has card drops remaining. When only one drop remains, it will start checking more frequently. When the game you’re idling has no more cards, it’ll move on to the next game. When no more cards are available, the program will terminate.</description>
+<summary>Get your [Steam Trading Cards](https://steamcommunity.com/tradingcards) the Quickest Possible Way</summary>
+<releaseNotes>
+### 1.2
+- Cookie-related code (steamLogin) has been updated to handle the steamLoginSecure cookie. This fixes problems related to not being able to log in to Steam through Idle Master Extended.
+- Fast-mode is now the default idling method in the bundled config file.
+
+### 1.1
+- Minor GUI changes
+
+### 1.0
+- Updated Steamworks.NET to version 11.0.0 (does not require the file CSteamworks.dll)
+- Extended the custom dark theme to cover more forms
+- Created an additional loading .gif to better match the custom dark theme
+- Fixed a couple of label-related issues (coloring, visibility, etc.)
+- The idling games are correctly updated when you switch mode (avoids skipping the previous "current badge")
+- The progress bar takes the current session progress into account
+- Updated the browser to display the URL visited and the protocol (https)
+- The cookies now include steamLoginSecure
+</releaseNotes>
+</metadata>
+<files>
+<file src="tools\**" target="tools" />
+</files>
+</package>
