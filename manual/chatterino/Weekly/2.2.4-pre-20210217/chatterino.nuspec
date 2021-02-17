@@ -25,7 +25,7 @@
 - Minor: Update emojis version to 13 (2020).
 - Minor: Remove EmojiOne 2 and 3 due to license restrictions.
 - Minor: Hide "Case-sensitive" column for user highlights.
-- Minor: Added `/streamlink` command. Usage: `/streamlink <channel>`. You can also use the command without arguments in any twitch channel to open it in streamlink.
+- Minor: Added `/streamlink` command. Usage: `/streamlink &lt;channel&gt;`. You can also use the command without arguments in any twitch channel to open it in streamlink.
 - Dev: Migrated `TwitchAccount::(un)ignoreUser` to Helix and made `TwitchAccount::loadIgnores` use Helix call.
 
 ### 2.2.4-20210203
