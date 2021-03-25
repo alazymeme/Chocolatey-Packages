@@ -10,3 +10,7 @@ builds/
 
 # zip files
 *.zip
+
+# Other shit
+VERIFICATION.txt
+LICENSE.txt
