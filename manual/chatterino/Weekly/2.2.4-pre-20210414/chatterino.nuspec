@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+<metadata>
+<id>chatterino</id>
+<version>2.2.4-pre-20210414</version>
+<packageSourceUrl>https://github.com/chatterino/chatterino2</packageSourceUrl>
+<owners>ALazyMeme</owners>
+<title>Chatterino</title>
+<authors>fourtf</authors>
+<projectUrl>https://chatterino.com</projectUrl>
+<iconUrl>https://fourtf.com/img/chatterino-icon-64.png</iconUrl>
+<licenseUrl>https://github.com/Chatterino/chatterino2/blob/master/LICENSE</licenseUrl>
+<requireLicenseAcceptance>false</requireLicenseAcceptance>
+<projectSourceUrl>https://github.com/chatterino/chatterino2</projectSourceUrl>
+<docsUrl>https://wiki.chatterino.com/</docsUrl>
+<bugTrackerUrl>https://github.com/Chatterino/chatterino2/issues</bugTrackerUrl>
+<tags>chatterino2 twitch chat irc chatterino chatclient</tags>
+<description>Chatterino is a chat client for Twitch chat. It aims to be an improved/extended version of the Twitch web chat.</description>
+<summary>Chatterino is a chat client for Twitch.tv</summary>
+<releaseNotes>
+## Weekly
+
+### 2.2.4-20210414
+- Minor: Handle messages that users can share after unlocking a new bits badge.
+- Minor: PageUp and PageDown now scroll in the emote popup.
+- Bugfix: Fixed search field not being focused on popup open.
+- Bugfix: Fix buffer overflow in emoji parsing.
+
+### 2.2.4-20210407
+- Major: Add `/settitle` and `/setgame` commands.
+
+### 2.2.4-20210325
+- Major: Added support for bit emotes - the ones you unlock after cheering to streamer.
+- Minor: Added the `/clearmessages` command to clear the split.
+- Minor: Added a context menu to avatar in usercard. It opens on right-clicking the avatar in usercard.
+- Minor: Removed refresh label from usercard.
+- Bugfix: Fix no tooltip being displayed when hovering over a cheer emote.
+- Bugfix: Fix BTTV/FFZ channel emote errors when no emotes are found.
+- Bugfix: Fix crashing on clip creation in "special" channels.
+
+### 2.2.4-20210310
+- Minor: Humanized all numbers visible to end-users.
+
+### 2.2.4-20210217
+- Major: Commands `/ignore` and `/unignore` have been renamed to `/block` and `/unblock` in order to keep consistency with Twitch's terms.
+- Minor: Update emojis version to 13 (2020).
+- Minor: Remove EmojiOne 2 and 3 due to license restrictions.
+- Minor: Hide "Case-sensitive" column for user highlights.
+- Minor: Added `/streamlink` command. Usage: `/streamlink &lt;channel&gt;`. You can also use the command without arguments in any twitch channel to open it in streamlink.
+- Dev: Migrated `TwitchAccount::(un)ignoreUser` to Helix and made `TwitchAccount::loadIgnores` use Helix call.
+
+### 2.2.4-20210203
+- Minor: Added `/marker` command - similar to webchat, it creates a stream marker.
+- Minor: Added regular expression support to filters.
+- Minor: Added human-readable formatting to remaining timeout duration.
+- Dev: Removed unused `humanize` library.
+
+### 2.2.4-20210127
+- Bugfix: Fixed hidden tooltips when always on top is active.
+- Dev: Migrated `Kraken::getChannel` to Helix.
+- Dev: Updated minimum required macOS version to 10.15.
+
+### 2.2.4-20210120
+- Major: Added clip creation support. You can create clips with `/clip` command, `Alt+X` keybind or `Create a clip` option in split header's context menu. This requires a new authentication scope so re-authentication will be required to use it.
+- Minor: Added a setting to disable messages sent to /mentions split from making the tab highlight with the red marker.
+- Minor: Added `/chatters` command showing chatter count.
+
+### 2.2.4-20210113
+- Minor: Added automatic streamer mode detection to Linux.
+- Minor: Added option to supress live notifications when streamer mode is active.
+- Minor: Updated the listing of top-level domains.
+- Bugfix: Fix RECONNECT messages from Twitch not being respected properly.
+- Bugfix: Fix anonymous users being pinged by "username" justinfan64537.
+
+### 2.2.4-20210106
+- Minor: Added a button to the split context menu to open the moderation view for a channel when the account selected has moderator permissions.
+- Bugfix: Fix an IRC crash bug that occurred when the "Limit message height" setting was enabled and a message was being split up into multiple lines.
+
+### 2.2.4-20201223
+- Minor: Added option to match mentioned user to their chat colour.
+- Minor: Added username truecase autocompletion.
+- Dev: Migrated `TwitchAccount::(un)followUser` from Kraken to Helix and moved it to `Helix::(un)followUser`.
+
+### 2.2.4-20201216
+- Minor: Placeholder text fixes.
+- Minor: Made BetterTTV emote tooltips use authors' display name.
+- Minor: Added Ctrl + 1/2/3/... and Ctrl+9 shortcuts to Emote Popup (activated with Ctrl+E). They work exactly the same as shortcuts in main window.
+- Minor: Added reconnect link to the "You are banned" message.
+- Minor: Improved search popup window titles.
+
+### 2.2.4-20201209
+- Minor: Tab and split titles now use display/localized channel names.
+- Minor: Add a setting to limit the amount of historical messages loaded from the Recent Messages API.
+- Bugfix: Fix a crash bug that occurred when moving splits across windows and closing the "parent tab".
+- Dev: Migrated `Kraken::getUser` to Helix.
+
+### 2.2.4-20201202
+- Minor: Made "#channel" in `/mentions` tab a clickable link which takes you to the channel that you were mentioned in.
+- Minor: Flag all popup dialogs as actual dialogs so they get the relevant window manager hints.
+- Bugfix: Fix a freeze caused by ignored and replaced phrases followed by Twitch Emotes.
+
+### 2.2.4-20201125
+- Minor: Added a link to twitchemotes.com to context menu when right-clicking Twitch emotes.
+- Minor: Added a keyboard shortcut (Ctrl+F5) for "Reconnect"
+- Minor: Made `Try to find usernames without @ prefix` option still resolve usernames when special characters (commas, dots, (semi)colons, exclamation mark, question mark) are appended to them.
+- Dev: Updated minimum required Qt framework version to 5.12.
+
+### 2.2.4-20201118
+- Minor: Flag all popup dialogs as actual dialogs so they get the relevant window manager hints.
+- Minor: Added placeholder text for message text input box.
+- Minor: Don't show update button for nightly builds on macOS and Linux, this was already the case for Windows.
+- Minor: Made usercard update user's display name.
+- Bugfix: Fix crash occurring when pressing Escape in the Color Picker Dialog.
+- Bugfix: Fix a crash caused by FrankerFaceZ responding with invalid emote links.
+- Bugfix: Fix a bug that caused `Ignore page` to fall into an infinity loop with an empty pattern and regex enabled.
+- Bugfix: Fix `:` emote completion menu ignoring emote capitalization.
+- Bugfix: Fixed previous link info not updating after `Link information` setting is enabled
+
+## Beta
+
+### 2.2.3
+- Added "Channel Filters". Refer to https://wiki.chatterino.com/Filters for documentation.
+- Added Streamer Mode configuration (under `Settings -> General`), where you can select which features of Chatterino should behave differently when you are in Streamer Mode. (#2001)
+- Added emote completion using a colon (`:`) to the whispers channel.
+- Added a viewer list button to twitch channel header.
+- Added followage and subage information to usercard.
+- Added an option to only open channels specified in command line with `-c` parameter. You can also use `--help` to display short help message.
+- Added customizable timeout buttons to the user info popup.
+- Added image for streamer mode in the user popup icon.
+- Added vip and unvip buttons.
+- Added settings for displaying a line where the last read message was.
+- Settings now enabled by default:
+	- Colorized nicknames
+	- Show channels live
+	- Bold usernames
+- Removed loading of "v1" window layouts. If you haven't updated Chatterino in more than 2 years, there's a chance you will lose your window layout.
+- Removed update checking on unsupported platforms.
+- Improved UX of the "Login expired!" message.
+- Improved viewer list window visibility.
+- Fixed the current channels emotes not appearing at the top of the emote picker popup.
+- Fixed the user popup needing to be refreshed to see new messagesUser popup will now automatically display messages as they are received.
+- Fixed the grammar in two rate-limited system messages.
+- Fixed PageUp and PageDown not scrolling in the selected split.
+- Fixed a bug preventing users from setting the highlight color of the second entry in the "User" highlights tab.
+- Fixed a bug where the "check user follow state" event could trigger a network request; requesting the user to follow or unfollow a user.
+- Fixed the `Automatically close user popup` setting not being respected when using the `/usercard` command.
+- Fixed symlinks not being handled correctly properly when saving commands and settings.
+- Fixed crash caused by Starting Chatterino in a minimized state after an update.
+- Fixed edge-cases on emote parsing.
+- Fixed timestamps being incorrect on some messages loaded from the recent-messages service on startup.
+- Fixed timestamps missing on channel point redemption messages.
+- Fixed tooltip didn't show in `EmotePopup` depending on the `Link preview` setting enabled or no.
+- Fixed Stream thumbnail not updating after using the "Change channel" feature.
+
+## Stable
+
+### 2.2.2 (Hotfix)
+- Fixed a crash related to channel point rewards.
+
+### 2.2.1 (Hotfix)
+- Small behaviour changes and fixes.
+
+### 2.2.0
+- Added emote auto-completion using a colon (`:`).
+- Added support for messages redeemed with channel points on Twitch.
+- Added recent messages in the user popup.
+- Added an option to display tabs on the left side of the window as opposed to the top.
+- Added support for an image uploading service. After configuration you can drag or paste images into chatterino to upload them.
+- Added rich content embed when hovering over a link. This can be enabled in the settings.
+- Added streamer mode - hiding user content while OBS is running.
+- Added extension support for Brave, Vivaldi and Microsoft Edge.
+- Added support for opening links in incognito mode for Microsoft Edge.
+- Removed Online Logs option in the usercard.
+
+### 2.1.7
+- Fixed a bug that caused tooltips to gain focus on Windows.
+- Replaced the link parser with a custom one.
+
+### 2.1.6
+- Fixed a bug that caused Chatterino to hang when parsing long links.
+- Fixed bit amounts not stacking properly.
+
+### 2.1.5
+- Added setting to restart Chatterino after a crash.
+- Added support for pausing the chat while using a hotkey
+- Added a custom duration when pausing on hover.
+- Added experimental IRC support.
+- Fixed the "access violation" issue in the windows installer.
+- Fixed timeouts and notices not showing correctly.
+- Fixed scrollbar highlights not getting refreshed when opening a popup/new split.
+
+
+### 2.1.4
+- Added option to search in settings and logs.
+- Added setting to open links in incognito by default.
+- Added discord-style searching "from:username" and "has:link"
+- Fixed highlights sometimes not playing sounds.
+- Fixed crashes related to caching.
+- Fixed minimized and maximized windows not saving correctly.
+- Fixed bits not showing correctly.
+- Fixed Ctrl+C not copying text in the search popup.
+
+### 2.1.3
+- Added settings for beta updates.
+- Added option for fresh install when installing on Windows (deleting settings/cache).
+- Added a button to copy username/id in user popup.
+- Added button to open AppData in the settings.
+- Fixed Windows uninstaller not deleting cache files.
+- Fixed system messages not showing.
+- Fixed window size growing on restart.
+
+### 2.1.2 (Hotfix)
+- Fixed maximized and minimized windows not saving correctly.
+
+### 2.1.1
+- Added settings:
+    - Show each indiviual timeout, instead of combining them for each user.
+    - Mention users with a comma at the end.
+    - Import commands from Chatterino 1.
+- Reworded some settings.
+- Browser extension:
+    - Fixed issue where it didn't run properly.
+    - Fixed fullscreen mode.
+    - Update has been deployed in Chrome and Firefox webstores.
+- Fixed crash when removing accounts.
+- Fixed window border being gray instead of white (dark mode).
+
+### 2.1.0
+- Added support for viewing users logs from cbenni.com and overrustlelogs.net.
+- Added support for recent messages when connecting to a channel.
+- Added settings:
+    - Pause gif emotes when the window is unfocused.
+    - Unshorten links.
+    - Show emote previews on hover.
+    - Show link info on hover.
+    - Exclude users from highlights.
+    - More sophisticated ignores.
+- Updated installer/update system.
+- Added tabs in the emote popup.
+- Added an option to display all domains in all-lowercase.
+- Added update button to the titlebar instead of showing message boxes.
+- Added style setting for last message indicator
+- Improved link matching.
+- Fixed double window frames.
+- Fixed a bug where starting Chatterino before the browser would break the extension.
+
+### 2.0.4-beta (Hotfix)
+- Fixed crash on Windows 7 and 8
+
+### 2.0.3-beta (Hotfix)
+- Fixed scaling of 150% or more.
+- Fixed issue where the window size is wrong on startup.
+
+### 2.0.2-beta
+- Added autocompletion for commands.
+- Added an information message when trying to send messages as an anonymous user.
+- Fixed sometimes not being able to send messages.
+- Fixed inline sent whispers marking all tabs.
+- Fixed crash when selecting font.
+- Fixed crash when selecting a channel to join.
+- Fixed saving non-latin highlights, and copying weird smiley names.
+
+### 2.0.1-beta
+- Added support for the Chatterino browser extension.
+- Added split header text color when the split is selected.
+- Fixed account and command list crashing when removing elements.
+- Fixed showing whispers sent by the user inline.
+- Fixed dragging the user info popup.
+- Fixed /clear not greying messages out.
+- Fixed tooltips being too big.
+
+### 2.0.0-beta
+- Initial beta release on Windows.
+</releaseNotes>
+<dependencies>
+<dependency id="vcredist140" version="14.20" />
+</dependencies>
+</metadata>
+<files>
+<file src="tools\**" target="tools" />
+</files>
+</package>
