@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+<metadata>
+<id>dankerino</id>
+<version>2.3.4-20210630</version>
+<packageSourceUrl>https://github.com/Mm2PL/dankerino</packageSourceUrl>
+<owners>ALazyMeme</owners>
+<title>Chatterino</title>
+<authors>Mm2PL</authors>
+<iconUrl>https://fourtf.com/img/chatterino-icon-64.png</iconUrl>
+<licenseUrl>https://github.com/Mm2PL/dankerino/blob/dankerino/LICENSE</licenseUrl>
+<requireLicenseAcceptance>false</requireLicenseAcceptance>
+<projectSourceUrl>https://github.com/Mm2PL/dankerino</projectSourceUrl>
+<bugTrackerUrl>https://github.com/Mm2PL/dankerino/issues</bugTrackerUrl>
+<tags>chatterino2 twitch chat irc chatterino chatclient dankerino</tags>
+<description>Dankerino is a fork of Chatterino 2. It aims to be an improved/extended version of the Twitch web chat.</description>
+<summary>Dankerino is a fork of Chatterino 2</summary>
+<releaseNotes>
+- Major: Add 7TV emotes from Chatterino7.
+- Minor: Move Dankerino settings to a separate tab.
+- Minor: Add advanced IRC tag related settings.
+- Minor: Allow for adjusting rate limit settings.
+</releaseNotes>
+<dependencies>
+<dependency id="vcredist140" version="14.20" />
+</dependencies>
+</metadata>
+<files>
+<file src="tools\**" target="tools" />
+</files>
+</package>
