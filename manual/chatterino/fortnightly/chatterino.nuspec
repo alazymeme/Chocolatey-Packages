@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
 <metadata>
 <id>chatterino</id>
-<version>2.3.3-pre-20210616</version>
+<version>2.3.4-pre-20210630</version>
 <packageSourceUrl>https://github.com/chatterino/chatterino2</packageSourceUrl>
 <owners>ALazyMeme</owners>
 <title>Chatterino</title>
@@ -19,15 +19,15 @@
 <summary>Chatterino is a chat client for Twitch.tv</summary>
 <releaseNotes>
 ## Fortnightly
-- Minor: Searching for users in the viewer list now searches anywhere in the user's name.
-- Minor: Added a link to accounts page in settings to "You need to be logged in to send messages" message.
-- Minor: Deletions of messages now show like timeouts.
-- Minor: Add setting for username style.
-- Minor: Restore automod functionality for moderators.
-- Minor: Switch to Twitch v2 emote API for animated emote support.
-- Bugfix: Fixed pasting text with URLs included.
-- Bugfix: Fixed bit emotes not loading in some rare cases.
+- Major: Added username autocompletion popup menu when typing usernames with an @ prefix.
+- Minor: Channel name in `&lt;channel&gt; has gone offline. Exiting host mode.` messages is now clickable.
+- Minor: Added `/openurl` command. Usage: `/openurl &lt;URL&gt;`. Opens the provided URL in the browser.
+- Minor: The `/live` split now shows channels going offline.
+- Bugfix: Fixed large timeout durations in moderation buttons overlapping with usernames or other buttons.
+- Bugfix: Fixed subscription emotes showing up incorrectly in the emote menu.
 - Bugfix: Fix reconnecting when IRC write connection is lost.
+- Bugfix: Fixed bit and new subscriber emotes not (re)loading in some rare cases.
+- Bugfix: Moderation buttons now show the correct time unit when using units other than seconds.
 </releaseNotes>
 <dependencies>
 <dependency id="vcredist140" version="14.20" />
