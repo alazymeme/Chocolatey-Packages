@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
 <metadata>
 <id>chatterino</id>
-<version>2.3.2-beta</version>
+<version>2.3.3-beta</version>
 <packageSourceUrl>https://github.com/chatterino/chatterino2</packageSourceUrl>
 <owners>ALazyMeme</owners>
 <title>Chatterino</title>
@@ -18,22 +18,44 @@
 <description>Chatterino is a chat client for Twitch chat. It aims to be an improved/extended version of the Twitch web chat.</description>
 <summary>Chatterino is a chat client for Twitch.tv</summary>
 <releaseNotes>
-### 2.3.2-beta
-- Major: New `/live` split for channels going live!
-- Minor: Added a message that displays a new date on new day.
-- Minor: Hosting messages are now clickable.
-- Minor: Messages held by automod are now shown to the user.
-- Minor: Load 100 blocked users rather than the default 20.
-- Bugfix: Fixed a potential crashing issue related to the browser extension.
-- Bugfix: Strip newlines from stream titles to prevent text going off of split header.
-- Bugfix: Automod messages now work properly again.
-- Bugfix: `Login expired` message no longer highlights all tabs.
-- Bugfix: Fix a deadlock that would occur during user badge loading.
-- Bugfix: Tabbing in `Select a channel to open` is now consistent.
-- Bugfix: Fix Ctrl + Backspace not closing colon emote picker.
-- Bugfix: Approving/denying AutoMod messages works again.
-- Dev: Migrated AutoMod approve/deny endpoints to Helix.
-- Dev: Migrated Get Cheermotes endpoint to Helix.
+### 2.3.3-beta
+- Major: Added username autocompletion popup menu when typing usernames with an @ prefix.
+- Major: Added ability to toggle visibility of Channel Tabs - This can be done by right-clicking the tab area or pressing the keyboard shortcut (default: Ctrl+U).
+- Minor: Added "Open in: new tab, browser player, streamlink" in twitch link context menu.
+- Minor: Sender username in automod messages shown to moderators shows correct color and display name.
+- Minor: Updated to Emoji v13.1
+- Minor: Username in channel points rewards redemption messages is now clickable.
+- Minor: Channel name in `&lt;channel&gt;` has gone offline. Exiting host mode. messages is now clickable.
+- Minor: Added `/openurl` command. Usage: `/openurl &lt;URL&gt;`. Opens the provided URL in the browser.
+- Minor: The `/live` split now shows channels going offline.
+- Minor: Searching for users in the viewer list now searches anywhere in the user's name.
+- Minor: Added a link to accounts page in settings to "You need to be logged in to send messages" message.
+- Minor: Deletions of messages now show like timeouts.
+- Minor: Add setting for username style.
+- Minor: Restore automod functionality for moderators.
+- Minor: Switch to Twitch v2 emote API for animated emote support.
+- Minor: Improved matching of game names when using `/setgame` command.
+- Minor: Limit the number of recent chatters to improve memory usage and reduce freezes.
+- Minor: Added `/popout` command. Usage: `/popout [channel]`. It opens browser chat for the provided channel. Can also be used without arguments to open current channels browser chat.
+- Minor: Added moderation buttons to search popup when searching in a split with moderation mode enabled.
+- Minor: Made "#channel" in `/mentions` tab show in usercards and in the search popup.
+- Minor: Added settings to disable custom FrankerFaceZ VIP/mod badges.
+- Bugfix: Messages that couldn't be searched or filtered are now handled correctly.
+- Bugfix: Made follower emotes suggested (in emote popup menu, tab completion, emote input menu) only in their origin channel, not globally.
+- Bugfix: Usercards on IRC will now only show user's messages.
+- Bugfix: Fixed founder badge not being respected by `author.subbed` filter.
+- Bugfix: Middle mouse click no longer scrolls in not fully populated usercards and splits.
+- Bugfix: Now deleting cache files that weren't modified in the past 14 days.
+- Bugfix: Fix bad behavior of the HTML color picker edit when user input is being entered.
+- Bugfix: Fixed large timeout durations in moderation buttons overlapping with usernames or other buttons.
+- Bugfix: Fixed subscription emotes showing up incorrectly in the emote menu.
+- Bugfix: Fix reconnecting when IRC write connection is lost.
+- Bugfix: Fixed bit and new subscriber emotes not (re)loading in some rare cases.
+- Bugfix: Moderation buttons now show the correct time unit when using units other than seconds.
+- Bugfix: Fixed pasting text with URLs included.
+- Bugfix: Fixed bit emotes not loading in some rare cases.
+- Bugfix: Fix reconnecting when IRC write connection is lost.
+- Bugfix: Fixed FFZ emote links for global emotes.
 </releaseNotes>
 <dependencies>
 <dependency id="vcredist140" version="14.20" />
